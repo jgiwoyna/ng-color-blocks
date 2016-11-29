@@ -5,7 +5,7 @@ colorBlocks.controller('SettingsController', ['$scope', 'DataFactory', function(
 
   self.colors = DataFactory.colors;
 
-  self.newColor = '';
+  self.newColor = "";
 
   self.newColorBlocks = [];
 
@@ -15,7 +15,7 @@ colorBlocks.controller('SettingsController', ['$scope', 'DataFactory', function(
   self.addNewColor = function() {
     self.colors.push(self.newColor);
     DataFactory.colors = self.colors;
-    self.newColor = '';
+    self.newColor = "";
     self.newColorBlocks = [];
     addColorBlocks(self.colors);
   }
