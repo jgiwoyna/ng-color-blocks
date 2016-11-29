@@ -3,14 +3,13 @@ colorBlocks.controller('SettingsController', ['$scope', 'DataFactory', function(
 
   var self = this;
 
-  self.colors = DataFactory.colors;
+  self.colors = DataFactory.colors; // original color array from data factory
 
-  self.newColor = "";
+  self.newColor = ""; // new color entered by user
 
-  self.newColorBlocks = [];
+  self.newColorBlocks = []; // new color block
 
-  addColorBlocks(self.colors);
-  console.log(self.newColorBlocks);
+  addColorBlocks(self.colors); // adds new color block to game
 
   self.addNewColor = function() {
     self.colors.push(self.newColor);
